@@ -2,6 +2,7 @@ package adudecalledleo.keystrokeview;
 
 import net.fabricmc.api.ClientModInitializer;
 
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,10 +15,11 @@ public class KeystrokeViewMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        log(Level.INFO, "Initializing");
+        HudRenderCallback.EVENT.register(KeystrokeViewWidget::onHudRender);
+        log(Level.INFO, "GLHF");
     }
 
     public static void log(Level level, String message){
-        LOGGER.log(level, essage);
+        LOGGER.log(level, message);
     }
 }
