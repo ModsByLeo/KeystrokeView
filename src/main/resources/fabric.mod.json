@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "keystrokeview",
+  "version": "${version}",
+  "name": "Keystroke View",
+  "description": "Adds a HUD element that displays keystrokes, for recording and streaming.",
+  "authors": [
+    "ADudeCalledLeo"
+  ],
+  "contributors": [],
+  "contact": {
+    "homepage": "https://curseforge.com/minecraft/mc-mods/keystroke-view",
+    "sources": "https://github.com/Leo40Git/KeystrokeView"
+  },
+  "license": "MIT",
+  "icon": "assets/keystrokeview/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "adudecalledleo.keystrokeview.KeystrokeViewMod"
+    ]
+  },
+  "mixins": [],
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  }
+}
