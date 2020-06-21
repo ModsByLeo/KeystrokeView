@@ -18,6 +18,9 @@
   "entrypoints": {
     "client": [
       "adudecalledleo.keystrokeview.KeystrokeViewMod"
+    ],
+    "modmenu": [
+      "adudecalledleo.keystrokeview.compat.ModMenuApiImpl"
     ]
   },
   "mixins": [],
