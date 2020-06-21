@@ -2,6 +2,7 @@ package adudecalledleo.keystrokeview;
 
 import adudecalledleo.keystrokeview.config.ModConfig;
 import adudecalledleo.keystrokeview.config.ModConfigGuiProviders;
+import adudecalledleo.keystrokeview.config.ModConfigSerializer;
 import me.sargunvohra.mcmods.autoconfig1u.AutoConfig;
 import me.sargunvohra.mcmods.autoconfig1u.gui.registry.api.GuiProvider;
 import me.sargunvohra.mcmods.autoconfig1u.gui.registry.api.GuiRegistryAccess;
@@ -26,7 +27,7 @@ public class KeystrokeViewMod implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        AutoConfig.register(ModConfig.class, GsonConfigSerializer::new);
+        AutoConfig.register(ModConfig.class, ModConfigSerializer::createSerializer);
         ModConfigGuiProviders.register(AutoConfig.getGuiRegistry(ModConfig.class));
         HudRenderCallback.EVENT.register(KeystrokeViewWidget::onHudRender);
         log(Level.INFO, "GLHF");
